@@ -1,0 +1,20 @@
+name: classic_ml
+channels:
+  - conda-forge
+  - defaults
+  - bioconda
+dependencies:
+  - python>=3.9
+  - biopython
+  - scikit-learn
+  - umap-learn
+  - tqdm
+  - jupyterlab
+  - pandas
+  - matplotlib
+  - seaborn
+  - catboost
+  - pytest
+  - pip
+  - pip:
+    - fair-esm
