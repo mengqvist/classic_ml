@@ -16,7 +16,7 @@ project_root/
 ├── src/
 │   ├── __init__.py
 │   ├── data_preprocessing.py
-│   ├── feature_engineering.py
+│   ├── encode.py
 │   └── model.py
 │
 ├── results/
