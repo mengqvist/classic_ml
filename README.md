@@ -29,6 +29,24 @@ project_root/
 └── .gitignore
 ```
 
+## Encoding Methods
+
+This project implements several protein sequence encoding methods:
+
+1. **One-hot encoding**: A simple binary encoding where each amino acid is represented by a binary vector.
+
+2. **Property encoding**: A comprehensive encoding based on various physicochemical properties of amino acids.
+
+3. **Heil short encoding**: Based on Heil et al. 2006 (DOI: 10.1093/bioinformatics/btl132). It encodes amino acids based on five categories of properties.
+
+4. **Bork encoding**: Based on Bork et al. 1990 (DOI: 10.1111/j.1432-1033.1990.tb19129.x). It uses eleven properties for encoding.
+
+5. **T-scale encoding**: Based on Tian et al. 2006 (DOI: 10.1016/j.molstruc.2006.07.004). It uses five descriptors for each amino acid.
+
+6. **AA-index encoding**: Based on a reduced set of AAIndex properties, as described in Gelman et al. 2021 (DOI: 10.1073/pnas.2104878118).
+
+7. **Georgiev encoding**: Based on Georgiev et al. 2008 (DOI: 10.1089/cmb.2008.0173), as implemented in ProFET (Ofer & Linial, DOI: 10.1093/bioinformatics/btv345). It uses 19 parameters for each amino acid.
+
 ## Setup
 
 1. Clone this repository:
