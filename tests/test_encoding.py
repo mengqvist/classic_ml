@@ -1,17 +1,9 @@
 import numpy as np
 import pytest
 from typing import List, Callable
-from pathlib import Path
-import sys
-
-# Add the project root to the Python path
-project_root = Path(__file__).parents[1]
-sys.path.append(str(project_root))
 
 # Now import from src.encode
-from src.encode import (
-    encode_sequences, one_hot, heil_short, bork, tscale, property_encoding, aa_index, is_valid_sequence
-)
+from encode import encode_sequences, one_hot, heil_short, bork, tscale, property_encoding, aa_index, is_valid_sequence
 
 # Test sequences
 test_sequences = [

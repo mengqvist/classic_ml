@@ -5,15 +5,7 @@ from sklearn.kernel_ridge import KernelRidge
 from sklearn.ensemble import GradientBoostingRegressor, RandomForestRegressor
 from sklearn.svm import SVR
 from pathlib import Path
-import sys
-
-# Add the project root to the Python path
-project_root = Path(__file__).parents[1]
-sys.path.append(str(project_root))
-
-from src.models import (
-    get_all_models
-)
+from models import get_all_models
 
 
 def test_get_all_models_returns_list():
