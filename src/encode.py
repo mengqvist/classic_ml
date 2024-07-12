@@ -297,10 +297,10 @@ def encode_sequences(seq_list: List[str], mode: str, num_fmt: str = 'float16') -
         ValueError: If mode is invalid or if any sequence is invalid
     """
     if not isinstance(seq_list, (list, tuple)):
-        raise TypeError("Input must be a list or tuple of strings")
+        raise TypeError(f"Input must be a list or tuple of strings, got {type(seq_list).__name__} instead")
 
     if not all(isinstance(seq, str) for seq in seq_list):
-        raise TypeError("All elements in the input must be strings")
+        raise TypeError(f"All elements in the input must be strings, the first non-string element is of type {type(seq_list[next(i for i, x in enumerate(seq_list) if not isinstance(x, str))]).__name__}")
 
     available_modes = {
         "identity": one_hot,

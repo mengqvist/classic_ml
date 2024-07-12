@@ -1,8 +1,8 @@
 import pandas as pd
 import os
-from pathlib import Path
 
-def prepare_romero_data(file_path='data/raw/romero_T50.tsv'):
+
+def prepare_romero_data(file_path):
     """
     Read the Romero TSV file and prepare the dataframe.
     
@@ -12,18 +12,13 @@ def prepare_romero_data(file_path='data/raw/romero_T50.tsv'):
     Returns:
     pd.DataFrame: Prepared dataframe with 'tm' and 'sequence' columns.
     """
-    if not os.path.isabs(file_path):
-        # If it's a relative path, make it absolute
-        file_path = os.path.join(os.path.dirname(__file__), '..', '..', file_path)
-    
+    # Check if the file exists    
     if not os.path.exists(file_path):
         raise FileNotFoundError(f"The file {file_path} does not exist.")
     
+    # Read the file
     df = pd.read_csv(file_path, sep='\t')
-    
-    # Check if required columns are present
-    if set(df.columns) != {'tm', 'sequence'}:
-        df.columns = ['tm', 'sequence']
+    df.columns = ['tm', 'sequence']
     
     return df[['tm', 'sequence']]
 
